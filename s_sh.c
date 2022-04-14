@@ -14,7 +14,8 @@ int comand;
 while (1)
 {
 printf("$ ");
-getline(&line, &len, stdin);
+comand = getline(&line, &len, stdin);
+tokenizer(*line);
 }
 return(0);
 }
