@@ -8,5 +8,6 @@
 
 int pr_basic(void);
 int _strcmp(char *s1, char *s2);
+void free_array(char **argv, int argc);
 
 #endif
