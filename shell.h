@@ -14,5 +14,7 @@ int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 void free_array(char **argv, int argc);
+int argc(char *string);
+char **argv(char *strings, int argc);
 
 #endif

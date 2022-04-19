@@ -16,7 +16,7 @@ perror("ERROR");
 }
 else 
 {
-buffer = _strcopy(buffer, string);
+buffer = _strcpy(buffer, string);
 token = strtok(buffer, " ");
 }
 if (token != NULL)
@@ -27,6 +27,7 @@ token = strtok(NULL, " ");
 free(buffer);
 return(i);
 }
+
 
 char **argv(char *strings, int argc)
 {
@@ -48,7 +49,7 @@ perror("ERROR");
 }
 else 
 {
-lenstrings = strlen(*strings);
+lenstrings = strlen(strings);/**consultar*/
 buffer = malloc(sizeof(char) * (lenstrings + 1));
 }
 if (buffer == NULL)
