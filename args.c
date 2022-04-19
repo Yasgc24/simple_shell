@@ -19,9 +19,8 @@ else
 buffer = _strcpy(buffer, string);
 token = strtok(buffer, " ");
 }
-if (token != NULL)
+for (;token != NULL; i++)
 {
-i++;
 token = strtok(NULL, " ");
 }
 free(buffer);
