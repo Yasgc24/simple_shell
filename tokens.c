@@ -23,5 +23,5 @@ char **tokenizer(char *string, char *delim)
 		i++;
 		div_w[i] = strtok(NULL, delim);
 	}
-	return(div_w);
+	return (div_w);
 }
