@@ -19,6 +19,7 @@ comand = getline(&line, &len, stdin);
 argcs = argc(line);
 comand = comand;
 printf("argc: %d\n", argcs);
+
 }
 return(0);
 }

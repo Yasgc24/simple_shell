@@ -8,9 +8,8 @@ void free_array(char **argv, int argc)
 
     while (i < argc)
     {
-        free(*(argv + i));
+        free(argv[i]);
         i++;
     }
-    
     free(argv);
 }
