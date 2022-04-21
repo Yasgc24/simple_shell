@@ -21,6 +21,6 @@ void free_array(char **argv, int argc);
 int argc(char *string);
 char *add_path(char **command);
 char **tokenizer(char *string, char *delim);
-int new_proccess(char *path, char ** tokens);
+int new_proccess(char *path, char **tokens, char **environ);
 
 #endif
