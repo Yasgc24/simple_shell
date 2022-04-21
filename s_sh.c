@@ -1,8 +1,9 @@
 #include "shell.h"
 
 /**
+ * main - execute a shell
  *
- *
+ * Return: 0 to success
  */
 
 int main(void)
