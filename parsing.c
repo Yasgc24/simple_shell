@@ -8,7 +8,8 @@
 char *add_path(char **command)
 {
 	int i;
-	char *path = NULL, *temp = NULL, **token = NULL;
+	char *path = NULL, *temp = NULL;
+	char **token = NULL;
 
 		for (i = 0; environ[i]; i++)
 			if (_strcmp(environ[i], "PATH") == 0)
@@ -20,7 +21,7 @@ char *add_path(char **command)
 					return (NULL);
 				}
 			}
-		token = tokenizer(path, "=:");
+		token = tokenizer(path, ":");
 		while (token != NULL)
 		{
 		       	temp = _strcpy(temp, token[1]);
