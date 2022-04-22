@@ -7,9 +7,14 @@
 
 char *add_path(char *command)
 {
-	int i, j;
+	int i, j = 0;
 	char *path = NULL, *temp = NULL;
 	char **token = NULL;
+
+	if (access(command, X_OK) == 0)
+	{
+		return (command);
+	}
 
 	i = 0;
 	while (environ[i])
@@ -26,10 +31,10 @@ char *add_path(char *command)
 				}
 		token = tokenizer(path, "=:");
 		
-		j = 0;
+		j = 1;
 		while (token[j])
 		{
-		       	temp = _strcpy(temp, token[1]);
+		       	temp = _strcpy(temp, token[j]);
                         temp = _strcat(temp, "/");
                         temp = _strcat(temp, command);
 		}
