@@ -1,14 +1,15 @@
-.TH Simple Shell 3 "24 - 04 -2022" "V0.3" "_printf man page."
+.TH Simple Shell 1 "20 - 04 -2022" "V0.01" "Simple Shell man page."
 
 .Sh NAME
-_printf - re-write of printf which formats and prints data.
+Simple Shell -  recreates the functionality of SHELL and handles  basic commands
 
 .SH SYNOPSIS
-. printf FORMAT [ARGUMENT]...
+. ./hsh
+  $ ... Awaits input from the user 
 
 .SH DESCRIPTION
-Prints ARGUMENT... according to FORMAT.
+this program recreates the functionality of SHELL with basic commands
 
 .SH AUTHOR
-Santiago Monsalve
+Yasmin Giraldo 
 Oscar Castro
