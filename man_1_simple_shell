@@ -1,0 +1,14 @@
+.TH Simple Shell 3 "24 - 04 -2022" "V0.3" "_printf man page."
+
+.Sh NAME
+_printf - re-write of printf which formats and prints data.
+
+.SH SYNOPSIS
+. printf FORMAT [ARGUMENT]...
+
+.SH DESCRIPTION
+Prints ARGUMENT... according to FORMAT.
+
+.SH AUTHOR
+Santiago Monsalve
+Oscar Castro
