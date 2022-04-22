@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <signal.h>
+#include <sys/wait.h>
+
 #define DELIM " \t\r\a\n"
 
 extern char **environ;
@@ -19,8 +22,8 @@ int _strlen(char *s);
 
 void free_array(char **argv, int argc);
 int argc(char *string);
-char *add_path(char **command);
+char *add_path(char *command);
 char **tokenizer(char *string, char *delim);
 int new_proccess(char *path, char **tokens, char **environ);
-
+void ctrl_c(int n);
 #endif

@@ -6,34 +6,40 @@
  * Return: 0 to success
  */
 
+
 int main(void)
 {
 char *line = NULL;
 size_t len = 0;
-int command;
+int command = 0;
 char **tokens = NULL;
 char *path = NULL;
+
+signal(SIGINT, ctrl_c);
+
+
 while (1)
 {
 write(STDOUT_FILENO, "$ ", 2);
-fflush(stdin);
-command = getline(&line, &len, stdin);
+command = (getline(&line, &len, stdin));
 
 if (command == EOF)
 {
-    free(line);
-    exit(127);
+free(line);
+return (0);
 }
-path = _strcpy(path, tokens[0]);
-tokens = malloc(sizeof(char *) * (command + 1));
+
 tokens = tokenizer(line, DELIM);
 
-path = add_path(tokens);
+path = add_path(tokens[0]);
+
 if (new_proccess(path, tokens, environ) == -1)
 {
-	free(tokens);
-	perror("ERROR");
+free(path);
+free(tokens);
+free(line);
 }
-exit(EXIT_SUCCESS);
+free(tokens);
 }
+return (0);
 }
