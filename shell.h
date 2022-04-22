@@ -20,7 +20,7 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
 
-void free_array(char **argv, int argc);
+void free_array(char **array);
 int argc(char *string);
 char *add_path(char *command);
 char **tokenizer(char *string, char *delim);

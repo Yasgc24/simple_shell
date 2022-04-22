@@ -1,15 +1,18 @@
 #include "shell.h"
 
+/**
+ * free_array - function that frees memory of tokens
+ * @array: pointer to pointer to be freed
+ */
 
-
-void free_array(char **argv, int argc)
+void free_array(char **array)
 {
 	int i = 0;
 
-	while (i < argc)
+	while (array[i])
 	{
-		free(argv[i]);
+		free(array[i]);
 		i++;
 	}
-	free(argv);
+	free(array);
 }
