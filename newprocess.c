@@ -6,7 +6,7 @@
  * a child proccess and executes a command
  * @path: Path to command
  * @tokens: pointer to array of tokens
- *
+ * @environ: environ
  * Return: 0 to success
  */
 int new_proccess(char *path, char **tokens, char **environ)
@@ -20,6 +20,7 @@ int new_proccess(char *path, char **tokens, char **environ)
 		free(path);
 		return (1);
 	}
+
 	if (pidc == 0)
 	{
 		if (execve(path, tokens, environ) == -1)
@@ -31,7 +32,7 @@ int new_proccess(char *path, char **tokens, char **environ)
 	{
 		wait(&status);
 		free(path);
-		free(tokens);
+		free_array(tokens);
 	}
 	return (0);
 }

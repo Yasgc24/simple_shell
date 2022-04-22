@@ -1,8 +1,9 @@
 #include "shell.h"
 
-/*
- *
- *
+/**
+ * add_path - Searches the path of the command
+ * @command: command
+ * Return: path
  */
 
 char *add_path(char *command)
@@ -45,6 +46,7 @@ char *add_path(char *command)
 				return (temp);
 			}
 			j++;
+			free(temp);
 	}
 	free(path);
 	free(token);

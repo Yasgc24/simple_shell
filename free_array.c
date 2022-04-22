@@ -2,14 +2,14 @@
 
 
 
-void free_array(char **argv, int argc)
+void free_array(char **array)
 {
 	int i = 0;
 
-	while (i < argc)
+	while (array[i])
 	{
-		free(argv[i]);
+		free(array[i]);
 		i++;
 	}
-	free(argv);
+	free(array);
 }

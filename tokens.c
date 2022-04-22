@@ -1,6 +1,11 @@
 #include "shell.h"
 
-
+/**
+ * tokenizer - take the line and splith it into segments
+ * @string: string to tokenizer
+ * @delim: delimiter
+ * Return: A pointer to array
+ */
 
 char **tokenizer(char *string, char *delim)
 {
