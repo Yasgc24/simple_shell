@@ -1,43 +1,48 @@
-#include "shell.h"
+#include "head.h"
 
 /**
- * main - execute a shell
+ * prompt - executes interactive prompt
  *
- * Return: 0 to success
+ * Return: 0 to success.
  */
-
-
-int main(void)
+void *prompt(char *interactive_str, char *line)
 {
-	char *line = NULL;
-	size_t len = 0;
-	int command = 0, arg_counter;
-	char **tokens = NULL;
-	char *path = NULL;
+    char **argument_variable = NULL;
+    int len_characters = 0, argument_count = 0;
+    size_t line_size = 0;
 
-	signal(SIGINT, ctrl_c);
+    while (EOF)
+    {
+        print_line(interactive_str);
 
-	while (1)
-	{
-		write(STDOUT_FILENO, "$ ", 2);
-		command = (getline(&line, &len, stdin));
-		if (command == EOF)
-		{
-			free(line);
-			return (0);
-		}
-		arg_counter = argc(line);
-		tokens = argv(line, arg_counter);
-		printf("argv: %s", tokens[0]);
-		/*path = add_path(tokens[0]);*/
+        
+        fflush(stdin);
+        
+        len_characters = getline(&line, &line_size, stdin);
 
-		if (new_proccess(path, tokens, environ) == -1)
-		{
-			free(path);
-			free_double_pointer(tokens, arg_counter);
-			free(line);
-		}
-		free_double_pointer(tokens, arg_counter);
-	}
-	return (0);
+     
+        if (line == NULL)
+            perror("Error");
+
+
+        if (len_characters == EOF)
+        {
+            free(line);
+            fflush(stdin);
+            exit(127);
+        }
+        
+        line = clean_line(line);
+
+        
+        argument_count = argc(line);
+        
+        argument_variable = argv(line, argument_count);
+        if (argument_count != 0)
+        {
+            argument_variable[0] = create_path_extension(argument_variable[0], argument_variable, argument_count);
+            printf("%s\n", argument_variable[0]);
+        }        
+    }
+        
 }
