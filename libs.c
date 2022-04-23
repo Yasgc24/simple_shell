@@ -84,3 +84,19 @@ while (src[s] != 0)
 }
 return (dest);
 }
+
+
+/**
+ * _print - print a array characters
+ * @str: Input data array
+ *
+ **/
+
+void _print(char *str)
+{
+	int i, count;
+
+	count = _strlen(str);
+	for (i = 0; i < count; i++)
+        write(1, &str[i], 1);
+}
