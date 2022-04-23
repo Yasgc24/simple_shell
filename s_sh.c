@@ -11,7 +11,7 @@ int main(void)
 {
 	char *line = NULL;
 	size_t len = 0;
-	int command = 0;
+	int command = 0, arg_counter;
 	char **tokens = NULL;
 	char *path = NULL;
 
@@ -26,16 +26,18 @@ int main(void)
 			free(line);
 			return (0);
 		}
-		tokens = tokenizer(line, DELIM);
-		path = add_path(tokens[0]);
+		arg_counter = argc(line);
+		tokens = argv(line, arg_counter);
+		printf("argv: %s", tokens[0]);
+		/*path = add_path(tokens[0]);*/
 
 		if (new_proccess(path, tokens, environ) == -1)
 		{
 			free(path);
-			free(tokens);
+			free_double_pointer(tokens, arg_counter);
 			free(line);
 		}
-		free(tokens);
+		free_double_pointer(tokens, arg_counter);
 	}
 	return (0);
 }

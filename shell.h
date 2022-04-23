@@ -19,11 +19,12 @@ int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 
-
+char **argv(char *strings, int argc);
 void free_array(char **array);
 int argc(char *string);
 char *add_path(char *command);
 char **tokenizer(char *string, char *delim);
 int new_proccess(char *path, char **tokens, char **environ);
 void ctrl_c(int n);
+void free_double_pointer(char **argv, int argc);
 #endif
