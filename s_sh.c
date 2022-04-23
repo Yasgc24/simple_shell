@@ -1,4 +1,4 @@
-#include "head.h"
+#include "shell.h"
 
 /**
  * prompt - executes interactive prompt
