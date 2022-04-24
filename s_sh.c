@@ -2,7 +2,8 @@
 
 /**
  * prompt - executes interactive prompt
- *
+ * @interactive_str: String interactive
+ * @line: line
  * Return: 0 to success.
  */
 void *prompti(char *interactive_str, char *line)
