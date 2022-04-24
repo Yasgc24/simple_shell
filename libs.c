@@ -98,5 +98,5 @@ void _print(char *str)
 
 	count = _strlen(str);
 	for (i = 0; i < count; i++)
-        write(1, &str[i], 1);
+		write(1, &str[i], 1);
 }

@@ -7,15 +7,11 @@
  */
 int main(void)
 {
-    char *new_line = NULL;
-    
+	char *new_line = NULL;
 
-    while (isatty(STDIN_FILENO) == 1)
-    {
-        
-        prompt("$ ", new_line);
-    }
-
-
-    return (0);
+	while (isatty(STDIN_FILENO) == 1)
+	{
+		prompt("$ ", new_line);
+	}
+	return (0);
 }
