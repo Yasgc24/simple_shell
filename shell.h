@@ -33,7 +33,7 @@ char *clean_line(char *line);
 void free_double_pointer(char **argv, int argc);
 void *prompti(char *interactive_str, char *line);
 char *create_path_extension(char *cmd, char **argv, int argc);
-char *validate_access(char *cmd, char*tokenizer ,char **argv, int argc);
+char *validate_access(char *cmd, char *tokenizer, char **argv, int argc);
 char *get_route_bin(char *path, char *token);
 void exe_command(char **argv_command, int argc, int bash_count);
 void create_process_to_execute(char **argv_command, int argc, int bash_count);
