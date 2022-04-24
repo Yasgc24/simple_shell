@@ -84,7 +84,7 @@ void promptni(char *line)
 		else
 			free_double_pointer(argument_variable, argument_count);
 	}
-	free(line);
+	free(NULL);
 	exit(0);
 }
 
