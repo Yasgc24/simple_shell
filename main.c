@@ -9,9 +9,15 @@ int main(void)
 {
 	char *new_line = NULL;
 
-	while (isatty(STDIN_FILENO) == 1)
+	if (isatty(STDIN_FILENO) == 1)
 	{
-		prompt("$ ", new_line);
+		prompti("$ ", new_line);
 	}
+
+	else
+    {
+     
+        promptni(new_line);
+    }
 	return (0);
 }
