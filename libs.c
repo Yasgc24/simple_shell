@@ -78,9 +78,9 @@ int i, j;
 
 
 /**
- * _print - print a array characters
+ * c_print - print a array characters
  * @str: Input data array
- *
+ * Return: void
  **/
 
 void c_print(char *str)

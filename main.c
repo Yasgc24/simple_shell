@@ -15,9 +15,8 @@ int main(void)
 	}
 
 	else
-    {
-     
-        promptni(new_line);
-    }
+	{
+		promptni(new_line);
+	}
 	return (0);
 }
