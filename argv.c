@@ -9,11 +9,11 @@
 
 char **argv(char *line, int argument_count)
 {
-	char **return_newline = NULL, *tmp_line = NULL, *tokenizer = NULL;
+	char **rtn_newline = NULL, *tmp_line = NULL, *tokenizer = NULL;
 	int len_line = 0, i = 0;
 
-	return_newline = malloc(sizeof(char *) * (argument_count + 1));
-	if (return_newline == NULL)
+	rtn_newline = malloc(sizeof(char *) * (argument_count + 1));
+	if (rtn_newline == NULL)
 	{
 		perror("Error");
 	}
@@ -22,7 +22,7 @@ char **argv(char *line, int argument_count)
 	tmp_line = malloc(sizeof(char) * (len_line + 1));
 	if (tmp_line == NULL)
 	{
-		free(return_newline);
+		free(rtn_newline);
 		perror("Error");
 	}
 
@@ -33,22 +33,22 @@ char **argv(char *line, int argument_count)
 	while (tokenizer != NULL)
 	{
 		len_line = _strlen(tokenizer);
-		return_newline[i] = malloc(sizeof(char) * (len_line + 1));
-		if (return_newline[i] == NULL)
+		rtn_newline[i] = malloc(sizeof(char) * (len_line + 1));
+		if (rtn_newline[i] == NULL)
 		{
-			free_double_pointer(return_newline, argument_count);
+			free_double_pointer(rtn_newline, argument_count);
 			perror("Error");
 		}
 
-		return_newline[i] = _strcpy(return_newline[i], tokenizer);
+		rtn_newline[i] = _strcpy(rtn_newline[i], tokenizer);
 		tokenizer = strtok(NULL, DELIM);
 		i++;
 	}
-	return_newline[i] = NULL;
+	rtn_newline[i] = NULL;
 	free(line);
 	free(tmp_line);
 
-	return (return_newline);
+	return (rtn_newline);
 }
 
 
