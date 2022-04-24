@@ -39,6 +39,6 @@ void exe_command(char **argv_command, int argc, int bash_count);
 void create_process_to_execute(char **argv_command, int argc, int bash_count);
 char *get_path();
 void sys_error(char **argv, int count, char *error);
-
+void ctrl_c(int n);
 
 #endif

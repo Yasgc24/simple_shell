@@ -11,6 +11,8 @@ void *prompti(char *interactive_str, char *line)
 	char **arg_var = NULL;
 	int len_chars = 0, arg_count = 0, bash_count = 1;
 	size_t line_size = 0;
+	
+	signal(SIGINT, ctrl_c);
 
 	while (EOF)
 	{
@@ -61,6 +63,8 @@ void promptni(char *line)
 	char **arg_var = NULL;
 	size_t line_size = 0;
 
+	signal(SIGINT, ctrl_c);
+
 	while (getline(&line, &line_size, stdin) != EOF)
 	{
 
@@ -68,7 +72,7 @@ void promptni(char *line)
 			perror("Error");
 
 		line = clean_line(line);
-		argt_count = argc(line);
+		arg_count = argc(line);
 		arg_var = argv(line, arg_count);
 
 		if (arg_count != 0)
