@@ -8,26 +8,27 @@
 int argc(char *string)
 {
 	char *tokenizer = NULL, *copy_str = NULL;
-    int len_str = 0;
-    if (string == NULL)
-        perror("Error");
+	int len_str = 0;
 
-    len_str = _strlen(string);
-    copy_str = malloc(len_str + 1);
+	if (string == NULL)
+		perror("Error");
 
-    if (copy_str == NULL)
-        perror("Error");
-    
-    copy_str = _strcpy(copy_str, string);
+	len_str = _strlen(string);
+	copy_str = malloc(len_str + 1);
 
-    tokenizer = strtok(copy_str, DELIM);
-    len_str = 0;
+	if (copy_str == NULL)
+		perror("Error");
 
-    while (tokenizer != NULL)
-    {
-        len_str++;
-        tokenizer = strtok(NULL, DELIM);
-    }
-    free(copy_str);
-    return (len_str);
+	copy_str = _strcpy(copy_str, string);
+
+	tokenizer = strtok(copy_str, DELIM);
+	len_str = 0;
+
+	while (tokenizer != NULL)
+	{
+		len_str++;
+		tokenizer = strtok(NULL, DELIM);
+	}
+	free(copy_str);
+	return (len_str);
 }
