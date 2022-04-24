@@ -13,7 +13,7 @@ void *prompti(char *interactive_str, char *line)
 
     while (EOF)
     {
-        print_line(interactive_str);
+        c_print(interactive_str);
 
         
         fflush(stdin);

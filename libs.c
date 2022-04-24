@@ -92,7 +92,7 @@ return (dest);
  *
  **/
 
-void _print(char *str)
+void c_print(char *str)
 {
 	int i, count;
 

@@ -15,7 +15,7 @@ extern char **environ;
 
 
 int _strlen(char *s);
-void print_line(char *str);
+void c_print(char *str);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
@@ -35,7 +35,7 @@ void *prompti(char *interactive_str, char *line);
 char *create_path_extension(char *cmd, char **argv, int argc);
 char *validate_access(char *cmd, char*tokenizer ,char **argv, int argc);
 char *get_route_bin(char *path, char *token);
-void run_command(char **argv_command, int argc, int bash_count);
+void exe_command(char **argv_command, int argc, int bash_count);
 void create_process_to_execute(char **argv_command, int argc, int bash_count);
 char *get_path();
 void sys_error(char **argv, int count, char *error);
