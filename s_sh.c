@@ -85,7 +85,7 @@ void *prompti(char *interactive_str, char *line)
 }
 
 /**
- * non_interactive - if insert code in mode interactive execute
+ * promptni - if insert code in mode interactive execute
  * @buf: buf to getline
  * @argv: the new argv
  * @buf_size: new size of getline

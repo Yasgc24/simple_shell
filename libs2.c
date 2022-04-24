@@ -1,20 +1,5 @@
 #include "shell.h"
 /**
- * _print - print a array characters
- * @str: Input data array
- *
- **/
-
-void _print(char *str)
-{
-	int i, count;
-
-	count = _strlen(str);
-	for (i = 0; i < count; i++)
-        write(1, &str[i], 1);
-}
-
-/**
  * _atoi - Convert strintg to integer
  * @s: pointer to the string to be iterated
  *
