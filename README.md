@@ -78,8 +78,8 @@ $
 
 In the following example we enter the simple shell with the compilation code, then we compile with `./hsh` and see what I enter `"Cisfun$"`, then we list the files `"ls"` and see the path `"pwd"` , then we `exit` and return to our default shell
 
-![](https://i.ibb.co/mrnMrhn/ejemplo1.png)
 
+![ejemplo](https://user-images.githubusercontent.com/98331961/165084046-8e46bd4e-f437-479e-af2a-b3378297922a.png)
 
 
 ## Bugs
