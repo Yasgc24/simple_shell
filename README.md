@@ -13,7 +13,7 @@ This is a simple UNIX shell that replicates the functionality of the simple shel
 | ------------ | ------------ |
 | AUTHORS  |   |
 | args.c  |   |
-|  enterl.c|   |
+|  enterl.c |   |
 | exit_shell.c  |   |
 | free_array.c  |   |
 |  env.c |   |
@@ -24,17 +24,7 @@ This is a simple UNIX shell that replicates the functionality of the simple shel
 | path.c  |   |
 | shell.h |   |
 | s_sh.c  |   |
-| tokens.c  |   |
-
-
-### Built-Ins
-
-The simple shell has support for the following built-in commands:
-
-| Command | Definition  |
-| ------------ | ------------ |
-|  env | 	Prints the environment  |
-| exit  |  Exits the shell |
+| argv.c   |   |
 
 
 ## Steps to use the Shell
