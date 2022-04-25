@@ -7,25 +7,9 @@ This is a simple UNIX shell that replicates the functionality of the simple shel
 
  Any text seperated by a single space is considered to be an argument. The respective command typed by the user is then executed as if in a UNIX shell.
  
-### Files Description
+## Flowchart
 
-| File  |  Description |
-| ------------ | ------------ |
-| AUTHORS  |   |
-| args.c  |   |
-|  enterl.c |   |
-| exit_shell.c  |   |
-| free_array.c  |   |
-|  env.c |   |
-| handle_sigint.c |   |
-|  libs.c |   |
-| man_1_simple_shell  |   |
-| newprocess.c  |   |
-| path.c  |   |
-| shell.h |   |
-| s_sh.c  |   |
-| argv.c   |   |
-
+![image](https://user-images.githubusercontent.com/98331961/165128217-9733a8dd-986b-4d63-88d3-00418bef50b9.png)
 
 ## Steps to use the Shell
 
